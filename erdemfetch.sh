@@ -1,0 +1,11 @@
+#!/bin/sh
+echo "==============="
+echo "  Erdemfetch   "
+echo "==============="
+echo "User         :  $USERNAME"
+echo "Machine      :  $(hostname)"
+echo "OS           :  $(uname -sr)"
+echo "Architecture :  $(uname -m)"
+echo "Disk (C:)    :  $(df -h /dev/fs/C |awk 'NR==2 {print $3 "/" $2 "used"}')"
+echo "Processes    :  $(ps -e | wc -l)"
+echo "==============="
